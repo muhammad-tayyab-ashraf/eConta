@@ -1,0 +1,57 @@
+<div class="sidenav">
+     <div class="login-main-text">
+        <h2>ProfitView</h2>
+        <p>Login or register from here to access.</p>
+     </div>
+</div>
+<div class="container-fluid height-inherit" id='login-container'>
+  <div class="row height-inherit">
+    <div class="col-md-6 col-sm-7 col-12 lgn-bg-col height-inherit">
+      <div class='login-bg-cont height-inherit d-flex align-items-center justify-content-center'>
+        <div class='cloud-work-site-text'>
+          <h2>ProfitView</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-sm-5 col-12 frm-bg-col height-inherit d-flex align-items-center pt-5">
+      <div class="relative dark-theme-bloc-xs">
+        <div class="login-form-cont">
+          <div class="form-group pt-5">
+            <h2>Sign In</h2>
+          </div>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'login-form-tag'} ) do |f| %>
+            <div class="form-group pt-3">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email",
+                                class: 'bot-bor-design form-control', placeholder: 'Email' %>
+            </div>
+
+            <div class="form-group relative pt-3">
+              <%= f.password_field :password, autocomplete: "current-password",
+                                   class: 'bot-bor-design form-control pwd-field', placeholder: 'Password' %>
+              <%= image_tag 'visibility', class: 'pswd-visible-icon' %>
+            </div>
+
+            <div class='forgot-password pb-3'>
+              <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                <small><%= link_to "Forgot Password?", new_password_path(resource_name), class: 'text-secondary' %></small>
+              <% end %>
+              <br>
+              <small><%= link_to "New User? Sign up", new_user_registration_path, :class => 'text-secondary pt-2' %></small>
+            </div>
+            <% if false and devise_mapping.rememberable? %>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+            <% end %>
+
+            <div class="form-group">
+              <%= f.submit "Sign In", class: 'pink-btn' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="sidenav">
+     <div class="login-main-text">
+        <h2>ProfitView</h2>
+        <p>Login or register from here to access.</p>
+     </div>
+</div>
+<div class="container-fluid height-inherit" id='login-container'>
+  <div class="row height-inherit">
+    <div class="col-md-6 col-sm-7 col-12 lgn-bg-col height-inherit">
+      <div class='login-bg-cont height-inherit d-flex align-items-center justify-content-center'>
+        <div class='cloud-work-site-text'>
+          <h2>ProfitView</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-sm-5 col-12 frm-bg-col height-inherit d-flex align-items-center pt-5">
+      <div class="relative dark-theme-bloc-xs">
+        <div class="login-form-cont">
+          <div class="form-group pt-5">
+            <h2>Sign Up</h2>
+          </div>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'login-form-tag'} ) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+
+            <div class="form-group pt-3">
+              <%= f.text_field :name, autofocus: true, autocomplete: "name",
+                                class: 'bot-bor-design form-control', placeholder: 'Your Name' %>
+            </div>
+
+            <div class="form-group pt-3">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email",
+                                class: 'bot-bor-design form-control', placeholder: 'Email' %>
+            </div>
+
+            <div class="form-group pt-3">
+              <%= f.phone_field :mobile, autofocus: true, autocomplete: "mobile",
+                                class: 'bot-bor-design form-control', placeholder: 'Your Mobile #' %>
+            </div>
+
+            <div class="form-group pt-3">
+              <%= f.text_field :company, autofocus: true, autocomplete: "company",
+                                class: 'bot-bor-design form-control', placeholder: 'Company' %>
+            </div>
+
+            <div class="form-group pt-3 relative">
+              <%= f.password_field :password, autocomplete: "new-password",
+                                   class: 'bot-bor-design form-control pwd-field', placeholder: 'New Password' %>
+              <%= image_tag 'visibility', class: 'pswd-visible-icon' %>
+            </div>
+
+            <div class="form-group pt-3 relative">
+              <%= f.password_field :password_confirmation, autocomplete: "confirm-new-password",
+                                   class: 'bot-bor-design form-control pwd-field', placeholder: 'Confirm New Password' %>
+              <%= image_tag 'visibility', class: 'pswd-visible-icon' %>
+            </div>
+
+            <div class="form-group pt-3">
+              <%= f.submit "Sign Up", class: 'pink-btn' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
