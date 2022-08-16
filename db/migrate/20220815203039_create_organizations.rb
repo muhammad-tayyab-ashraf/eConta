@@ -11,10 +11,10 @@ class CreateOrganizations < ActiveRecord::Migration[5.2]
       t.string :no
       t.string :zip
       t.string :county
-      t.string :country      
+      t.string :country
       t.references :user, foreign_key: true
 
-      t.timestamps
+      t.datetime
     end
   end
 end
