@@ -16,14 +16,10 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
-    <!-- <div id="sidebar" style="width: 100px;">
-      <%= render 'layouts/sidebars' %>
-    </div> -->
-
     <div id="main-container" class="height-inherit">
       <div class='height-inherit'>
         <div id="main-content">
-          <% unless params["controller"] == "devise/sessions" || params["controller"] == "devise/registrations" %>
+          <% unless params["controller"] == "devise/sessions" || params["controller"] == "devise/registrations" || params["controller"] == "devise/passwords" %>
             <%= render partial: 'layouts/header'%>
           <% end %>
           <%= yield %>

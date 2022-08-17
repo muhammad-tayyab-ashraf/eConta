@@ -1,41 +1,450 @@
-<header class="site-header sticky-top py-1">
-  <nav class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2" href="#" aria-label="Product">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
-    </a>
-    <a class="py-2 d-none d-md-inline-block" href="#">About Us</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Why Us</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Services</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Products</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Prices</a>
-  </nav>
-</header>
-<!-- <div class="header top_header d-flex">
-  <a href="#default" class="logo me-auto p-2 d-flex align-items-center app-name">
-    <h2>eConta</h2>
-  </a>
-  <a href="#" class='hamburger-link'>
-    <i class="fa fa-bars pt-2 text-cus-white"></i>
-  </a>
-
-  <div class="header-right-dropdown p-2 d-flex justify-content-center align-items-center">
-    <div class="dropdown custom-dropdown">
-      <a class="dropdown-toggle text-cus-white text-center" href="javascript:void(0)" id="dropdownMenuButton"
-         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="far fa-user"></i>&nbsp;
-        <i class="fas fa-chevron-down cursor-pointer"></i>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-right text-center profile_dropdown" aria-labelledby="dropdownMenuButton">
-        <li class="text-center p-0">
-          <span class="loged_in_username"> <%= current_user&.name&.titleize %></span>
-          <span class="loged_in_role">(<%= current_user&.company %>)</span>
-          <hr>
+<div class="header" id="head">
+  <div class="zgh-headerWrap">
+    <div class="zgh-brand"><span class="zgh-menu"><span class="hamburger-box"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+      </span><a href="/">Zoho</a></div>
+    <div class="zgh-nav active">
+      <ul>
+        <li><a href="/inventory/?src=top-header&amp;ireft=books">About Us</a>
+          <!-- <p style="top: 0px; left: 0px;">Online inventory and order management</p> -->
         </li>
-        <li><a href="/users/edit"> <i class="fas fa-user-edit"></i>Edit Profile </a> </li>
-        <li><%= link_to destroy_user_session_path, method: :delete  do %><i class="fas fa-sign-out-alt"></i>Sign Out<% end %>
+        <li><a href="/crm/?src=top-header&amp;ireft=books">Why Us</a>
+          <!-- <p style="top: 0px; left: 0px;">The complete CRM platform</p> -->
         </li>
+        <li><a href="/mail/?src=top-header&amp;ireft=books">Services</a>
+          <!-- <p style="top: 0px; left: 0px;">Secure business email</p> -->
+        </li>
+        <li><a href="/projects/?src=top-header&amp;ireft=books">Products</a>
+          <!-- <p style="top: 0px; left: 0px;">Turn every project into a success story</p> -->
+        </li>
+        <li><a href="/expense/?src=top-header&amp;ireft=books">Proces</a>
+          <!-- <p style="top: 0px; left: 0px;">Effortless expense reporting</p> -->
+        </li>
+        <!-- <li><a href="/creator/?src=top-header&amp;ireft=books">Creator</a>
+          <p style="top: 0px; left: 0px;">Low-code platform to build custom solutions</p>
+        </li> -->
+        <!-- <li class="zgh-megaMenu zgh-products"><a href="javascript:;">All Products</a>
+          <div class="zgh-megaMenuBox">
+            <div class="zgh-megaMenuInner" style="height: 752px;">
+              <ul class="zgh-megaMenuCat">
+                <li class="active zgh-b-sales" data-list="1" data-bundle="CRM Plus,Zoho One"><span>Sales</span></li>
+                <li class="zgh-b-marketing" data-list="2" data-bundle="Marketing Plus,Zoho One"><span>Marketing</span></li>
+                <li class="zgh-b-customerservice zgh-catDivider" data-list="3" data-bundle="CRM Plus,Zoho One"><span>Customer Service</span></li>
+                <li class="zgh-b-finance" data-list="4" data-bundle="Finance Plus,Zoho One"><span>Finance</span></li>
+                <li class="zgh-b-people-culture zgh-catDivider" data-list="5" data-bundle="People Plus,Zoho One"><span>People &amp; Culture</span></li>
+                <li class="zgh-b-email-office" data-list="9" data-bundle="Workplace,Zoho One"><span>Email &amp; Office</span></li>
+                <li class="zgh-b-projectmanagement" data-list="10" data-bundle="Zoho One"><span>Project Management</span></li>
+                <li class="zgh-b-collaboration zgh-catDivider" data-list="11" data-bundle="Workplace,Zoho One"><span>Collaboration</span></li>
+                <li class="zgh-b-customsolutions" data-list="7" data-bundle="Zoho One"><span>Custom Solutions</span></li>
+                <li class="zgh-b-bi-analytics" data-list="8" data-bundle="Zoho One"><span>BI &amp; Analytics</span></li>
+                <li class="zgh-b-it" data-list="6" data-bundle="Zoho One"><span>IT</span></li>
+                <li class="zgh-b-legal zgh-catDivider" data-list="14" data-bundle=""><span>Legal</span></li>
+                <li class="zgh-b-bundles" data-list="12" data-bundle=""><span>Bundles</span></li>
+                <li class="zgh-b-marketplace" data-list="13" data-bundle=""><span>Marketplace</span></li>
+              </ul>
+              <div class="zgh-megaMenuPro">
+                <div class="active zgh-sales" data-category="1">
+                  <div data-index="10" class="zgh-menuItem zgh-b-voice">
+                    <a href="/voice/?src=top-header&amp;ireft=books-sa" class="zgh-i-voice">
+                      <p>Voice</p><em>Cloud phone system for sales and support teams.</em></a>
+                  </div>
+                  <div data-index="11" class="zgh-menuItem zgh-b-thrive"><a href="/thrive/?src=top-header&amp;ireft=books-sa" class="zgh-i-thrive"><span style="left: 148px; top: 30px;">Beta</span><p>Thrive</p><em>A complete Loyalty and Affiliate management platform</em></a></div>
+                  <div data-index="1" class="zgh-menuItem zgh-b-crm">
+                    <a href="/crm/?src=top-header&amp;ireft=books-sa" class="zgh-i-crm" style="height: 129px;">
+                      <p>CRM</p><em>The complete CRM platform</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-bigin">
+                    <a target="_blank" href="https://www.bigin.com/?src=top-header&amp;ireft=books-sa" class="zgh-i-bigin" style="height: 129px;">
+                      <p>Bigin</p><em>Pipeline-centric CRM for small businesses</em></a>
+                  </div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-desk">
+                    <a href="/desk/?src=top-header&amp;ireft=books-sa" class="zgh-i-desk" style="height: 129px;">
+                      <p>Desk</p><em>Put customer service at the heart of your company</em></a>
+                  </div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-forms">
+                    <a href="/forms/?src=top-header&amp;ireft=books-sa" class="zgh-i-forms" style="height: 129px;">
+                      <p>Forms</p><em>Online form builder for data collection</em></a>
+                  </div>
+                  <div data-index="5" class="zgh-menuItem zgh-b-salesiq">
+                    <a href="/salesiq/?src=top-header&amp;ireft=books-sa" class="zgh-i-salesiq" style="height: 129px;">
+                      <p>SalesIQ</p><em>Convert website visitors into customers</em></a>
+                  </div>
+                  <div data-index="6" class="zgh-menuItem zgh-b-bookings">
+                    <a href="/bookings/?src=top-header&amp;ireft=books-sa" class="zgh-i-bookings" style="height: 129px;">
+                      <p>Bookings</p><em>Find the perfect time with your customers</em></a>
+                  </div>
+                </div>
+                <div class="zgh-marketing" data-category="2">
+                  <div data-index="1" class="zgh-menuItem zgh-b-social">
+                    <a href="/social/?src=top-header&amp;ireft=books-ma" class="zgh-i-social" style="height: 129px;">
+                      <p>Social</p><em>The all-in-one social media management software</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-campaigns">
+                    <a href="/campaigns/?src=top-header&amp;ireft=books-ma" class="zgh-i-campaigns" style="height: 129px;">
+                      <p>Campaigns</p><em>Reach and engage your customers</em></a>
+                  </div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-forms">
+                    <a href="/forms/?src=top-header&amp;ireft=books-ma" class="zgh-i-forms" style="height: 129px;">
+                      <p>Forms</p><em>Online form builder for data collection</em></a>
+                  </div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-survey">
+                    <a href="/survey/?src=top-header&amp;ireft=books-ma" class="zgh-i-survey" style="height: 129px;">
+                      <p>Survey</p><em>Online surveys for every occasion</em></a>
+                  </div>
+                  <div data-index="5" class="zgh-menuItem zgh-b-sites">
+                    <a href="/sites/?src=top-header&amp;ireft=books-ma" class="zgh-i-sites" style="height: 129px;">
+                      <p>Sites</p><em>Design mobile friendly websites</em></a>
+                  </div>
+                  <div data-index="6" class="zgh-menuItem zgh-b-pagesense">
+                    <a href="/pagesense/?src=top-header&amp;ireft=books-ma" class="zgh-i-pagesense" style="height: 129px;">
+                      <p>PageSense</p><em>Conversion rate optimization software</em></a>
+                  </div>
+                  <div data-index="7" class="zgh-menuItem zgh-b-backstage">
+                    <a href="/backstage/?src=top-header&amp;ireft=books-ma" class="zgh-i-backstage" style="height: 129px;">
+                      <p>Backstage</p><em>End-to-end event management software</em></a>
+                  </div>
+                  <div data-index="8" class="zgh-menuItem zgh-b-meeting">
+                    <a href="/meeting/?src=top-header&amp;ireft=books-ma" class="zgh-i-meeting" style="height: 129px;">
+                      <p>Meeting</p><em>Host secure online meetings. Organize engaging webinars</em></a>
+                  </div>
+                  <div data-index="9" class="zgh-menuItem zgh-b-commerce">
+                    <a href="/commerce/?src=top-header&amp;ireft=books-ma" class="zgh-i-commerce" style="height: 129px;">
+                      <p>Commerce</p><em>All-in-one ecommerce platform</em></a>
+                  </div>
+                  <div data-index="10" class="zgh-menuItem zgh-b-landingpage"><a href="/landingpage/?src=top-header&amp;ireft=books-ma" class="zgh-i-landingpage" style="height: 147px;"><span style="left: 188px; top: 30px;">Beta</span><p>LandingPage</p><em>Smart landing page builder to increase conversion rates.</em></a></div>
+                  <div data-index="11" class="zgh-menuItem zgh-b-salesiq">
+                    <a href="/salesiq/?src=top-header&amp;ireft=books-ma" class="zgh-i-salesiq" style="height: 147px;">
+                      <p>SalesIQ</p><em>Convert website visitors into customers</em></a>
+                  </div>
+                  <div data-index="12" class="zgh-menuItem zgh-b-thrive"><a href="/thrive/?src=top-header&amp;ireft=books-ma" class="zgh-i-thrive" style="height: 147px;"><span style="left: 148px; top: 30px;">Beta</span><p>Thrive</p><em>A complete Loyalty and Affiliate management platform</em></a></div>
+                </div>
+                <div class="zgh-customerservice" data-category="3">
+                  <div data-index="5" class="zgh-menuItem zgh-b-salesiq">
+                    <a href="/salesiq/?src=top-header&amp;ireft=books-cu" class="zgh-i-salesiq">
+                      <p>SalesIQ</p><em>Convert website visitors into customers</em></a>
+                  </div>
+                  <div data-index="1" class="zgh-menuItem zgh-b-desk">
+                    <a href="/desk/?src=top-header&amp;ireft=books-cu" class="zgh-i-desk">
+                      <p>Desk</p><em>Put customer service at the heart of your company</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-assist">
+                    <a href="/assist/?src=top-header&amp;ireft=books-cu" class="zgh-i-assist">
+                      <p>Assist</p><em>Support remote customers instantly</em></a>
+                  </div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-lens">
+                    <a href="/lens/?src=top-header&amp;ireft=books-cu" class="zgh-i-lens">
+                      <p>Lens</p><em>Solve problems with interactive remote assistance</em></a>
+                  </div>
+                </div>
+                <div class="zgh-finance" data-category="4">
+                  <div data-index="1" class="zgh-menuItem zgh-b-books">
+                    <a href="/books/?src=top-header&amp;ireft=books-fi" class="zgh-i-books" style="height: 111px;">
+                      <p>Books</p><em>Smart accounting for growing businesses</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-invoice">
+                    <a href="/invoice/?src=top-header&amp;ireft=books-fi" class="zgh-i-invoice" style="height: 111px;">
+                      <p>Invoice</p><em>100% Free invoicing solution</em></a>
+                  </div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-expense">
+                    <a href="/expense/?src=top-header&amp;ireft=books-fi" class="zgh-i-expense" style="height: 111px;">
+                      <p>Expense</p><em>Effortless expense reporting</em></a>
+                  </div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-inventory">
+                    <a href="/inventory/?src=top-header&amp;ireft=books-fi" class="zgh-i-inventory" style="height: 129px;">
+                      <p>Inventory</p><em>Online inventory and order management</em></a>
+                  </div>
+                  <div data-index="5" class="zgh-menuItem zgh-b-subscriptions">
+                    <a href="/subscriptions/?src=top-header&amp;ireft=books-fi" class="zgh-i-subscriptions" style="height: 129px;">
+                      <p>Subscriptions</p><em>Smarter billing for your subscription business</em></a>
+                  </div>
+                  <div data-index="6" class="zgh-menuItem zgh-b-checkout">
+                    <a href="/checkout/?src=top-header&amp;ireft=books-fi" class="zgh-i-checkout" style="height: 129px;">
+                      <p>Checkout</p><em>Simple one-time and recurring online payments solution</em></a>
+                  </div>
+                  <div data-index="7" class="zgh-menuItem zgh-b-payroll">
+                    <a href="/payroll/?src=top-header&amp;ireft=books-fi" class="zgh-i-payroll">
+                      <p>Payroll</p><em>Payroll experience redefined to be stress-free</em></a>
+                  </div>
+                </div>
+                <div class="zgh-people-culture" data-category="5">
+                  <div data-index="1" class="zgh-menuItem zgh-b-people">
+                    <a href="/people/?src=top-header&amp;ireft=books-pe" class="zgh-i-people" style="height: 129px;">
+                      <p>People</p><em>Organize, automate and simplify your HR processes</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-recruit">
+                    <a href="/recruit/?src=top-header&amp;ireft=books-pe" class="zgh-i-recruit" style="height: 129px;">
+                      <p>Recruit</p><em>Applicant tracking system</em></a>
+                  </div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-connect">
+                    <a href="/connect/?src=top-header&amp;ireft=books-pe" class="zgh-i-connect" style="height: 129px;">
+                      <p>Connect</p><em>Your social workplace</em></a>
+                  </div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-expense">
+                    <a href="/expense/?src=top-header&amp;ireft=books-pe" class="zgh-i-expense" style="height: 129px;">
+                      <p>Expense</p><em>Effortless expense reporting</em></a>
+                  </div>
+                  <div data-index="5" class="zgh-menuItem zgh-b-workerly">
+                    <a href="/workerly/?src=top-header&amp;ireft=books-pe" class="zgh-i-workerly" style="height: 129px;">
+                      <p>Workerly</p><em>Temporary Staffing Solution</em></a>
+                  </div>
+                  <div data-index="6" class="zgh-menuItem zgh-b-payroll">
+                    <a href="/payroll/?src=top-header&amp;ireft=books-pe" class="zgh-i-payroll" style="height: 129px;">
+                      <p>Payroll</p><em>Payroll experience redefined to be stress-free</em></a>
+                  </div>
+                  <div data-index="7" class="zgh-menuItem zgh-b-backtowork">
+                    <a href="/backtowork/?src=top-header&amp;ireft=books-pe" class="zgh-i-backtowork" style="">
+                      <p>BackToWork</p><em>Ensure employee safety at workplace</em></a>
+                  </div>
+                  <div data-index="8" class="zgh-menuItem zgh-b-shifts"><a href="/shifts/?src=top-header&amp;ireft=books-pe" class="zgh-i-shifts" style=""><span style="left: 148px; top: 30px;">New</span><p>Shifts</p><em>Employee scheduling and time tracking</em></a></div>
+                </div>
+                <div class="zgh-email-office" data-category="9">
+                  <div data-index="12" class="zgh-menuItem zgh-b-calendar">
+                    <a href="/calendar/?src=top-header&amp;ireft=books-em" class="zgh-i-calendar">
+                      <p>Calendar</p><em>Business calendar to manage and schedule events.</em></a>
+                  </div>
+                  <div data-index="1" class="zgh-menuItem zgh-b-mail">
+                    <a href="/mail/?src=top-header&amp;ireft=books-em" class="zgh-i-mail" style="height: 129px;">
+                      <p>Mail</p><em>Secure business email</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-officesuite">
+                    <a href="/office/?src=top-header&amp;ireft=books-em" class="zgh-i-officesuite" style="height: 129px;">
+                      <p>Office Suite</p><em>Powerful office editors for modern teams</em></a>
+                  </div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-writer">
+                    <a href="/writer/?src=top-header&amp;ireft=books-em" class="zgh-i-writer" style="height: 129px;">
+                      <p>Writer</p><em>A clean, crisp space to write and discuss</em></a>
+                  </div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-sheet">
+                    <a href="/sheet/?src=top-header&amp;ireft=books-em" class="zgh-i-sheet" style="height: 129px;">
+                      <p>Sheet</p><em>The spreadsheet application for collaborative work</em></a>
+                  </div>
+                  <div data-index="5" class="zgh-menuItem zgh-b-show">
+                    <a href="/show/?src=top-header&amp;ireft=books-em" class="zgh-i-show" style="height: 129px;">
+                      <p>Show</p><em>Create, collaborate and broadcast presentations</em></a>
+                  </div>
+                  <div data-index="6" class="zgh-menuItem zgh-b-notebook">
+                    <a href="/notebook/?src=top-header&amp;ireft=books-em" class="zgh-i-notebook" style="height: 129px;">
+                      <p>Notebook</p><em>A beautiful home for all your notes</em></a>
+                  </div>
+                  <div data-index="8" class="zgh-menuItem zgh-b-officeintegrator">
+                    <a href="/officeplatform/integrator/?src=top-header&amp;ireft=books-em" class="zgh-i-officeintegrator">
+                      <p>Office Integrator</p><em>Give your apps built-in document editors</em></a>
+                  </div>
+                  <div data-index="9" class="zgh-menuItem zgh-b-bookings">
+                    <a href="/bookings/?src=top-header&amp;ireft=books-em" class="zgh-i-bookings">
+                      <p>Bookings</p><em>Find the perfect time with your customers</em></a>
+                  </div>
+                  <div data-index="10" class="zgh-menuItem zgh-b-teaminbox">
+                    <a href="/teaminbox/?src=top-header&amp;ireft=books-em" class="zgh-i-teaminbox">
+                      <p>TeamInbox</p><em>Shared inboxes for teams</em></a>
+                  </div>
+                  <div data-index="11" class="zgh-menuItem zgh-b-zeptomail">
+                    <a href="/zeptomail/?src=top-header&amp;ireft=books-em" class="zgh-i-zeptomail">
+                      <p>ZeptoMail</p><em>Reliable &amp; instant transactional emails</em></a>
+                  </div>
+                </div>
+                <div class="zgh-projectmanagement" data-category="10">
+                  <div data-index="1" class="zgh-menuItem zgh-b-projects">
+                    <a href="/projects/?src=top-header&amp;ireft=books-pr" class="zgh-i-projects">
+                      <p>Projects</p><em>Turn every project into a success story</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-sprints">
+                    <a href="/sprints/?src=top-header&amp;ireft=books-pr" class="zgh-i-sprints">
+                      <p>Sprints</p><em>Planning and tracking tool for agile teams</em></a>
+                  </div>
+                </div>
+                <div class="zgh-collaboration" data-category="11">
+                  <div data-index="1" class="zgh-menuItem zgh-b-meeting">
+                    <a href="/meeting/?src=top-header&amp;ireft=books-co" class="zgh-i-meeting" style="height: 129px;">
+                      <p>Meeting</p><em>Host secure online meetings. Organize engaging webinars</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-workdrive">
+                    <a href="/workdrive/?src=top-header&amp;ireft=books-co" class="zgh-i-workdrive" style="height: 129px;">
+                      <p>WorkDrive</p><em>Online file management for teams</em></a>
+                  </div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-docs">
+                    <a href="/docs/?src=top-header&amp;ireft=books-co" class="zgh-i-docs" style="height: 129px;">
+                      <p>Docs</p><em>All your documents in one place</em></a>
+                  </div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-cliq">
+                    <a href="/cliq/?src=top-header&amp;ireft=books-co" class="zgh-i-cliq" style="height: 111px;">
+                      <p>Cliq</p><em>Chat that's built for work</em></a>
+                  </div>
+                  <div data-index="5" class="zgh-menuItem zgh-b-connect">
+                    <a href="/connect/?src=top-header&amp;ireft=books-co" class="zgh-i-connect" style="height: 111px;">
+                      <p>Connect</p><em>Your social workplace</em></a>
+                  </div>
+                  <div data-index="6" class="zgh-menuItem zgh-b-sign">
+                    <a href="/sign/?src=top-header&amp;ireft=books-co" class="zgh-i-sign" style="height: 111px;">
+                      <p>Sign</p><em>Sign and send documents</em></a>
+                  </div>
+                  <div data-index="7" class="zgh-menuItem zgh-b-teaminbox">
+                    <a href="/teaminbox/?src=top-header&amp;ireft=books-co" class="zgh-i-teaminbox" style="height: 129px;">
+                      <p>TeamInbox</p><em>Shared inboxes for teams</em></a>
+                  </div>
+                  <div data-index="8" class="zgh-menuItem zgh-b-learn">
+                    <a href="/learn/?src=top-header&amp;ireft=books-co" class="zgh-i-learn" style="height: 129px;">
+                      <p>Learn</p><em>All-in-one knowledge management platform.</em></a>
+                  </div>
+                  <div data-index="9" class="zgh-menuItem zgh-b-voice">
+                    <a href="/voice/?src=top-header&amp;ireft=books-co" class="zgh-i-voice" style="height: 129px;">
+                      <p>Voice</p><em>Cloud phone system for sales and support teams.</em></a>
+                  </div>
+                </div>
+                <div class="zgh-customsolutions" data-category="7">
+                  <div data-index="6" class="zgh-menuItem zgh-b-zeptomail">
+                    <a href="/zeptomail/?src=top-header&amp;ireft=books-cu" class="zgh-i-zeptomail">
+                      <p>ZeptoMail</p><em>Reliable &amp; instant transactional emails</em></a>
+                  </div>
+                  <div data-index="1" class="zgh-menuItem zgh-b-creator">
+                    <a href="/creator/?src=top-header&amp;ireft=books-cu" class="zgh-i-creator" style="height: 129px;">
+                      <p>Creator</p><em>Low-code platform to build custom solutions</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-catalyst">
+                    <a href="/catalyst/?src=top-header&amp;ireft=books-cu" class="zgh-i-catalyst" style="height: 129px;">
+                      <p>Catalyst</p><em>Simplest Serverless Platform</em></a>
+                  </div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-flow">
+                    <a href="/flow/?src=top-header&amp;ireft=books-cu" class="zgh-i-flow" style="height: 129px;">
+                      <p>Flow</p><em>Integrate your apps to automate business workflows</em></a>
+                  </div>
+                  <div data-index="5" class="zgh-menuItem zgh-b-officeintegrator">
+                    <a href="/officeplatform/integrator/?src=top-header&amp;ireft=books-cu" class="zgh-i-officeintegrator">
+                      <p>Office Integrator</p><em>Give your apps built-in document editors</em></a>
+                  </div>
+                </div>
+                <div class="zgh-bi-analytics" data-category="8">
+                  <div data-index="1" class="zgh-menuItem zgh-b-analytics">
+                    <a href="/analytics/?src=top-header&amp;ireft=books-bi" class="zgh-i-analytics" style="height: 111px;">
+                      <p>Analytics</p><em>Analyze your business data</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-dataprep"><a href="/dataprep/?src=top-header&amp;ireft=books-bi" class="zgh-i-dataprep" style="height: 111px;"><span style="left: 164px; top: 30px;">New</span><p>DataPrep</p><em>Advanced data preparation software</em></a></div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-embeddedbi"><a target="_blank" href="https://www.zoho.com/analytics/embedded-analytics.html?src=top-header&amp;ireft=books-bi" class="zgh-i-embeddedbi" style="height: 111px;"><span style="left: 188px; top: 30px;">Solutions</span><p>Embedded BI</p><em>Integrate Analytics anywhere</em></a></div>
+                </div>
+                <div class="zgh-it" data-category="6">
+                  <div data-index="1" class="zgh-menuItem zgh-b-creator">
+                    <a href="/creator/?src=top-header&amp;ireft=books-it" class="zgh-i-creator" style="height: 129px;">
+                      <p>Creator</p><em>Low-code platform to build custom solutions</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-site24x7">
+                    <a target="_blank" href="https://www.site24x7.com/?src=top-header&amp;ireft=books-it" class="zgh-i-site24x7" style="height: 129px;">
+                      <p>Site24x7</p><em>Website monitoring from a global perspective</em></a>
+                  </div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-flow">
+                    <a href="/flow/?src=top-header&amp;ireft=books-it" class="zgh-i-flow" style="height: 129px;">
+                      <p>Flow</p><em>Integrate your apps to automate business workflows</em></a>
+                  </div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-assist">
+                    <a href="/assist/?src=top-header&amp;ireft=books-it" class="zgh-i-assist" style="height: 111px;">
+                      <p>Assist</p><em>Support remote customers instantly</em></a>
+                  </div>
+                  <div data-index="5" class="zgh-menuItem zgh-b-vault">
+                    <a href="/vault/?src=top-header&amp;ireft=books-it" class="zgh-i-vault" style="height: 111px;">
+                      <p>Vault</p><em>Online password manager for teams</em></a>
+                  </div>
+                  <div data-index="6" class="zgh-menuItem zgh-b-bugtracker">
+                    <a href="/bugtracker/?src=top-header&amp;ireft=books-it" class="zgh-i-bugtracker" style="height: 111px;">
+                      <p>BugTracker</p><em>Fix bugs fast and ship great software</em></a>
+                  </div>
+                  <div data-index="7" class="zgh-menuItem zgh-b-mobiledevicemanagement">
+                    <a href="/mdm-cloud.html?src=top-header&amp;ireft=books-it" class="zgh-i-mobiledevicemanagement" style="height: 149px;">
+                      <p>Mobile Device Management</p><em>Easy-to-use &amp; affordable web-based MDM solution</em></a>
+                  </div>
+                  <div data-index="8" class="zgh-menuItem zgh-b-patchmanagerplus">
+                    <a href="/patchmanagerplus/?src=top-header&amp;ireft=books-it" class="zgh-i-patchmanagerplus" style="height: 149px;">
+                      <p>Patch Manager Plus</p><em>Stay clear of vulnerabilities and cyber attacks</em></a>
+                  </div>
+                  <div data-index="9" class="zgh-menuItem zgh-b-identitymanagement">
+                    <a href="/identity-management/?src=top-header&amp;ireft=books-it" class="zgh-i-identitymanagement" style="height: 149px;">
+                      <p>Identity Management</p><em>An identity management and governance solution</em></a>
+                  </div>
+                  <div data-index="10" class="zgh-menuItem zgh-b-logmanagementcloud">
+                    <a href="/log360-cloud/?src=top-header&amp;ireft=books-it" class="zgh-i-logmanagementcloud" style="height: 187px;">
+                      <p>Log Management Cloud</p><em>Store and manage all your log data on a secure cloud platform</em></a>
+                  </div>
+                  <div data-index="11" class="zgh-menuItem zgh-b-lens">
+                    <a href="/lens/?src=top-header&amp;ireft=books-it" class="zgh-i-lens" style="height: 187px;">
+                      <p>Lens</p><em>Solve problems with interactive remote assistance</em></a>
+                  </div>
+                  <div data-index="12" class="zgh-menuItem zgh-b-endpointcentral">
+                    <a href="/desktop-central-cloud/?src=top-header&amp;ireft=books-it" class="zgh-i-endpointcentral" style="height: 187px;">
+                      <p>Endpoint Central</p><em>A 360-degree UEM solution for enterprise management and security</em></a>
+                  </div>
+                  <div data-index="13" class="zgh-menuItem zgh-b-servicedeskplus">
+                    <a href="/online-service-desk-software.html?src=top-header&amp;ireft=books-it" class="zgh-i-servicedeskplus">
+                      <p>ServiceDesk Plus</p><em>Offer best-in-class IT support on the cloud</em></a>
+                  </div>
+                  <div data-index="14" class="zgh-menuItem zgh-b-catalyst">
+                    <a href="/catalyst/?src=top-header&amp;ireft=books-it" class="zgh-i-catalyst">
+                      <p>Catalyst</p><em>Simplest Serverless Platform</em></a>
+                  </div>
+                </div>
+                <div class="zgh-legal" data-category="14">
+                  <div data-index="1" class="zgh-menuItem zgh-b-contracts">
+                    <a href="/contracts/?src=top-header&amp;ireft=books-le" class="zgh-i-contracts">
+                      <p>Contracts</p><em>Comprehensive contract management software</em></a>
+                  </div>
+                </div>
+                <div class="zgh-bundles" data-category="12">
+                  <div data-index="8" class="zgh-menuItem zgh-b-zohoone"><a href="/one/?src=top-header&amp;ireft=books-bu" class="zgh-i-zohoone"><strong>All-in-one Suite:</strong><p>One</p><em>An integrated suite that encompasses all the apps in Zoho</em></a></div>
+                  <div data-index="1" class="zgh-menuItem zgh-b-crmplus"><a href="/crm/crmplus/?src=top-header&amp;ireft=books-bu" class="zgh-i-crmplus"><strong>Unified Customer Experience Platform:</strong><p>CRM Plus</p><em>Unified platform that helps deliver exceptional customer experience</em></a></div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-financeplus"><a href="/financeplus/?src=top-header&amp;ireft=books-bu" class="zgh-i-financeplus"><strong>Unified Finance Platform:</strong><p>Finance Plus</p><em>Everything you need to manage your operations and finance</em></a></div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-peopleplus"><a href="/peopleplus/?src=top-header&amp;ireft=books-bu" class="zgh-i-peopleplus"><strong>Unified HR Platform:</strong><p>People Plus</p><em>Integrated HR platform for seamless employee experience</em></a></div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-workplace"><a href="/workplace/?src=top-header&amp;ireft=books-bu" class="zgh-i-workplace"><strong>Integrated Collaboration Platform:</strong><p>Workplace</p><em>Create, collaborate, and communicate with your teams</em></a></div>
+                  <div data-index="5" class="zgh-menuItem zgh-b-itmanagement"><a href="/it-management/?src=top-header&amp;ireft=books-bu" class="zgh-i-itmanagement"><strong>Help Desk Management:</strong><p>IT Management</p><em>Align IT to your business with our support and monitoring solutions</em></a></div>
+                  <div data-index="7" class="zgh-menuItem zgh-b-marketingplus"><a href="/marketingplus/?src=top-header&amp;ireft=books-bu" class="zgh-i-marketingplus"><strong>Unified Marketing Platform:</strong><p>Marketing Plus</p><em>Unified platform to manage marketing efforts with confidence</em></a></div>
+                </div>
+                <div class="zgh-marketplace" data-category="13">
+                  <p class="marketplace-title">Do more with your Zoho products</p>
+                  <div data-index="1" class="zgh-menuItem zgh-b-extensions">
+                    <a href="https://marketplace.zoho.com/home" class="zgh-i-extensions" target="_blank">
+                      <p>Extensions</p><em>Integrate Zoho products with third party applications</em></a>
+                  </div>
+                  <div data-index="2" class="zgh-menuItem zgh-b-customapps">
+                    <a href="https://marketplace.zoho.com/customapps" class="zgh-i-customapps" target="_blank">
+                      <p>Custom Apps</p><em>Ease work with apps tailor-made for your business</em></a>
+                  </div>
+                  <div data-index="3" class="zgh-menuItem zgh-b-industrysolutions">
+                    <a href="https://marketplace.zoho.com/verticals" class="zgh-i-industrysolutions" target="_blank">
+                      <p>Industry Solutions</p><em>End-to-end business solutions for your vertical</em></a>
+                  </div>
+                  <div data-index="4" class="zgh-menuItem zgh-b-buildandsell">
+                    <a target="_blank" href="https://www.zoho.com/marketplace/build-and-sell.html" class="zgh-i-buildandsell">
+                      <p>Build and Sell</p><em>Build Extensions, Custom Apps and Industry solutions using our platforms and public APIs. Zoho Marketplace helps showcase your extensions to all our users worldwide</em></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li> -->
       </ul>
     </div>
+    <div class="zgh-utilities">
+      <div class="zgh-search"> <span class="zgh-search-icon"></span>
+        <div class="zgh-search-container">
+          <div class="zgh-search-wrap">
+            <div class="zgh-search-box">
+              <form action="" id="zgh-search-action" name="">
+                <input class="zgh-search-field" id="zgh-search-query" name="query" placeholder="Search for product overviews, FAQs, and more..." type="text">
+                <input class="zgh-search-btn" type="button"> <span class="zgh-search-clear"></span></form>
+            </div>
+          </div>
+          <div class="zgh-search-overlay"></div>
+        </div>
+      </div>
+      <div class="zgh-localization"><span class="zgh-localSelect">English</span>
+        <div class="zgh-localBox">
+          <ul></ul>
+        </div>
+      </div>
+      <div class="zgh-accounts">
+        <% unless user_signed_in? %>
+          <a href="/users/sign_in" class="zgh-login" style="display: inline-block;">Sign In</a>
+          <a href="/users/sign_up" class="zgh-signup" style="display: inline-block;">Sign Up Now</a>
+        <% else %>
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'zgh-signup', style: "display: inline-block;" %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'zgh-login', style: "display: inline-block;"  %>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="clearfix"></div>
-</div> -->
+</div>

@@ -19,91 +19,91 @@
 
 
 
- body {
-     font-family: "Lato", sans-serif;
- }
-
- .main-head{
-     height: 150px;
-     background: #FFF;
-
- }
-
- .sidenav {
-     height: 100%;
-     background-color: #000;
-     overflow-x: hidden;
-     padding-top: 20px;
- }
-
-
- .main {
-     padding: 0px 10px;
- }
-
- @media screen and (max-height: 450px) {
-     .sidenav {padding-top: 15px;}
- }
-
- @media screen and (max-width: 450px) {
-     .login-form{
-         margin-top: 10%;
-     }
-
-     .register-form{
-         margin-top: 10%;
-     }
- }
-
- @media screen and (min-width: 768px){
-     .main{
-         margin-left: 40%;
-     }
-
-     .sidenav{
-         width: 40%;
-         position: fixed;
-         z-index: 1;
-         top: 0;
-         left: 0;
-     }
-
-     .login-form{
-         margin-top: 80%;
-     }
-
-     .register-form{
-         margin-top: 20%;
-     }
- }
-
-
- .login-main-text{
-     margin-top: 20%;
-     padding: 60px;
-     color: #fff;
- }
-
- .login-main-text h2{
-     font-weight: 300;
- }
-
- .btn-black{
-     background-color: #000 !important;
-     color: #fff;
- }
-
- .pink-btn {
-   width: 130px;
-   height: 48px;
-   border-radius: 35px;
-   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
-   background-color: #fc3670;
-   border: none;
-   font-weight: 600;
-   color: #ffffffe8;
-   cursor: pointer;
- }
+ // body {
+ //     font-family: "Lato", sans-serif;
+ // }
+ //
+ // .main-head{
+ //     height: 150px;
+ //     background: #FFF;
+ //
+ // }
+ //
+ // .sidenav {
+ //     height: 100%;
+ //     background-color: #000;
+ //     overflow-x: hidden;
+ //     padding-top: 20px;
+ // }
+ //
+ //
+ // .main {
+ //     padding: 0px 10px;
+ // }
+ //
+ // @media screen and (max-height: 450px) {
+ //     .sidenav {padding-top: 15px;}
+ // }
+ //
+ // @media screen and (max-width: 450px) {
+ //     .login-form{
+ //         margin-top: 10%;
+ //     }
+ //
+ //     .register-form{
+ //         margin-top: 10%;
+ //     }
+ // }
+ //
+ // @media screen and (min-width: 768px){
+ //     .main{
+ //         margin-left: 40%;
+ //     }
+ //
+ //     .sidenav{
+ //         width: 40%;
+ //         position: fixed;
+ //         z-index: 1;
+ //         top: 0;
+ //         left: 0;
+ //     }
+ //
+ //     .login-form{
+ //         margin-top: 80%;
+ //     }
+ //
+ //     .register-form{
+ //         margin-top: 20%;
+ //     }
+ // }
+ //
+ //
+ // .login-main-text{
+ //     margin-top: 20%;
+ //     padding: 60px;
+ //     color: #fff;
+ // }
+ //
+ // .login-main-text h2{
+ //     font-weight: 300;
+ // }
+ //
+ // .btn-black{
+ //     background-color: #000 !important;
+ //     color: #fff;
+ // }
+ //
+ // .pink-btn {
+ //   width: 130px;
+ //   height: 48px;
+ //   border-radius: 35px;
+ //   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+ //   background-color: #fc3670;
+ //   border: none;
+ //   font-weight: 600;
+ //   color: #ffffffe8;
+ //   cursor: pointer;
+ // }
 
 // =================
 // Global css
@@ -645,72 +645,72 @@
 //     }
 //   }
 // }
-.container {
-  max-width: 960px;
-}
-
-/*
- * Custom translucent site header
- */
-
-.site-header {
-  background-color: rgba(0, 0, 0, .85);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-}
-.site-header a {
-  color: #8e8e8e;
-  transition: color .15s ease-in-out;
-}
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-/*
- * Dummy devices (replace them with your own or something else entirely!)
- */
-
-.product-device {
-  position: absolute;
-  right: 10%;
-  bottom: -30%;
-  width: 300px;
-  height: 540px;
-  background-color: #333;
-  border-radius: 21px;
-  transform: rotate(30deg);
-}
-
-.product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: 5px;
-}
-
-.product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5;
-}
+// .container {
+//   max-width: 960px;
+// }
+//
+// /*
+//  * Custom translucent site header
+//  */
+//
+// .site-header {
+//   background-color: rgba(0, 0, 0, .85);
+//   -webkit-backdrop-filter: saturate(180%) blur(20px);
+//   backdrop-filter: saturate(180%) blur(20px);
+// }
+// .site-header a {
+//   color: #8e8e8e;
+//   transition: color .15s ease-in-out;
+// }
+// .site-header a:hover {
+//   color: #fff;
+//   text-decoration: none;
+// }
+//
+// /*
+//  * Dummy devices (replace them with your own or something else entirely!)
+//  */
+//
+// .product-device {
+//   position: absolute;
+//   right: 10%;
+//   bottom: -30%;
+//   width: 300px;
+//   height: 540px;
+//   background-color: #333;
+//   border-radius: 21px;
+//   transform: rotate(30deg);
+// }
+//
+// .product-device::before {
+//   position: absolute;
+//   top: 10%;
+//   right: 10px;
+//   bottom: 10%;
+//   left: 10px;
+//   content: "";
+//   background-color: rgba(255, 255, 255, .1);
+//   border-radius: 5px;
+// }
+//
+// .product-device-2 {
+//   top: -25%;
+//   right: auto;
+//   bottom: 0;
+//   left: 5%;
+//   background-color: #e5e5e5;
+// }
 
 
 /*
  * Extra utilities
  */
-
-.flex-equal > * {
-  flex: 1;
-}
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    flex: 1;
-  }
-}
+//
+// .flex-equal > * {
+//   flex: 1;
+// }
+// @media (min-width: 768px) {
+//   .flex-md-equal > * {
+//     flex: 1;
+//   }
+// }
